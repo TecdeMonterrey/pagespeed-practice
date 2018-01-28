@@ -148,6 +148,7 @@ appears on the left side of the page.
         font-size: 110%;
         color: #fff;
         margin: 0;
+        font-family: sans-serif;
     }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
@@ -173,6 +174,7 @@ small screens.
     width: 2em;
     height: auto;
     padding: 2.1em 1.6em;
+    font-family: sans-serif;
 }
 
     .menu-link:hover,

@@ -6,6 +6,15 @@
     <meta http-equiv="cache-control" content="private, max-age=600" />
     <title>PageSpeed Practice</title>
     
+    <script src="script.js" async ></script>
+    <script src="moment.js" async ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#date").text(moment().format('MMMM Do YYYY'));
+        });
+    </script>
+    
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     <link rel="stylesheet" href="side-menu.css">
 </head>
@@ -20,15 +29,15 @@
 
     <div id="menu">
         <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="#" style="font-family:sans-serif">Excercise</a>
+            <a class="pure-menu-heading" href="#">Excercise</a>
 
             <ul class="pure-menu-list">
-                <li><a href="#main" class="pure-menu-link" style="font-family:sans-serif">PageSpeed</a></li>
+                <li><a href="#main" class="pure-menu-link" >PageSpeed</a></li>
                 <li class="menu-item-divided">
-                    <a href="#howto" class="pure-menu-link" style="font-family:sans-serif">Why use them</a>
+                    <a href="#howto" class="pure-menu-link" >Why use them</a>
                 </li>
                 <li class="menu-item-divided">
-                    <a href="#resizing" class="pure-menu-link" style="font-family:sans-serif">Resize your browser</a>
+                    <a href="#resizing" class="pure-menu-link" >Resize your browser</a>
                 </li>
             </ul>
         </div>
@@ -77,12 +86,5 @@
 </div>
 </body>
 <footer>
-    <script src="script.js" ></script>
-    <script src="moment.js" ></script>
-    <script>
-        function date(){
-            document.getElementById("demo").innerHTML = moment().format('MMMM Do YYYY');
-        }
-    </script>
 </footer>
 </html>
