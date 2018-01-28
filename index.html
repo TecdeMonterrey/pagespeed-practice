@@ -6,15 +6,6 @@
     <meta http-equiv="cache-control" content="private, max-age=600" />
     <title>PageSpeed Practice</title>
     
-    <script src="script.js" async ></script>
-    <script src="moment.js" async ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#date").text(moment().format('MMMM Do YYYY'));
-        });
-    </script>
-    
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     <link rel="stylesheet" href="side-menu.css">
 </head>
@@ -86,5 +77,13 @@
 </div>
 </body>
 <footer>
+    <script src="script.js" async ></script>
+    <script src="moment.js" async ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#date").text(moment().format('MMMM Do YYYY'));
+        });
+    </script>
 </footer>
 </html>
