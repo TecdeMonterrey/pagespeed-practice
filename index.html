@@ -6,10 +6,10 @@
     <meta http-equiv="cache-control" content="max-age=600" />
     <title>PageSpeed Practice</title>
     
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
-    <link rel="stylesheet" href="side-menu.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous" media="print">
+    <link rel="stylesheet" href="side-menu.css" media="print">
 </head>
-<body>
+<body onload="date()">
 
 <div id="layout">
     <!-- Menu toggle -->
@@ -80,7 +80,9 @@
     <script src="script.js" ></script>
     <script src="moment.js" ></script>
     <script>
-        document.getElementById("demo").innerHTML = moment().format('MMMM Do YYYY');
+        function date(){
+            document.getElementById("demo").innerHTML = moment().format('MMMM Do YYYY');
+        }
     </script>
 </footer>
 </html>
