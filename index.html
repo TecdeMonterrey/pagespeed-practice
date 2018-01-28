@@ -35,7 +35,7 @@
         <div class="header">
             <h1>PageSpeed Excercise</h1>
             <h2>Implement best practices for web performance.</h2>
-            <!--<h2 id="date"></h2>-->
+            <h2 id="date"></h2>
         </div>
 
         <div id="howto" class="content">
@@ -76,5 +76,11 @@
     <link rel="stylesheet" href="css/side-menu.css">
     <script async src="script.js" ></script>
     <script async src="moment.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#date").text(moment().format('MMMM Do YYYY'));
+        });
+    </script>
 </body>
 </html>
