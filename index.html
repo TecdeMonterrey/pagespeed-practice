@@ -3,14 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cache-control" content="max-age=60" />
+    <meta http-equiv="cache-control" content="max-age=600" />
     <title>PageSpeed Practice</title>
     
     <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     <link rel="stylesheet" href="side-menu.css">
-      
-    <script src="script.js" ></script>
-    <script src="moment.js" ></script>
 </head>
 <body>
 
@@ -42,8 +39,6 @@
             <h1>PageSpeed Excercise</h1>
             <h2>Implement best practices for web performance.</h2>
             <h2 id="date">
-            <!--<script>document.write(moment().format('MMMM Do YYYY'))</script>  -->
-                
             </h2>
         </div>
 
@@ -81,4 +76,11 @@
     </div>
 </div>
 </body>
+<footer>
+    <script src="script.js" ></script>
+    <script src="moment.js" ></script>
+    <script>
+        document.getElementById("demo").innerHTML = moment().format('MMMM Do YYYY');
+    </script>
+</footer>
 </html>
