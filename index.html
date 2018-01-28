@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PageSpeed Practice</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Practice</title>
 </head>
 <body>
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
-<link rel="stylesheet" href="side-menu.css">
-<div id="layout">
+
+<div id="layout"> 
+
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
@@ -17,30 +17,25 @@
 
     <div id="menu">
         <div class="pure-menu pure-menu-open">
-            <a class="pure-menu-heading" href="#" style="font-family:sans-serif">Excercise</a>
+            <a class="pure-menu-heading" href="#">Excercise</a>
 
             <ul class="pure-menu-list">
-                <li><a href="#main" class="pure-menu-link" style="font-family:sans-serif">PageSpeed</a></li>
+                <li><a href="#main" class="pure-menu-link" >PageSpeed</a></li>
                 <li class="menu-item-divided">
-                    <a href="#howto" class="pure-menu-link" style="font-family:sans-serif">Why use them</a>
+                    <a href="#howto" class="pure-menu-link" >Why use them</a>
                 </li>
                 <li class="menu-item-divided">
-                    <a href="#resizing" class="pure-menu-link" style="font-family:sans-serif">Resize your browser</a>
+                    <a href="#resizing" class="pure-menu-link" >Resize your browser</a>
                 </li>
             </ul>
         </div>
-    </div>
+    </div> 
     
-    <script src="script.js"></script>
-    <script src="moment.js"></script>    
-
     <div id="main">
         <div class="header">
             <h1>PageSpeed Excercise</h1>
             <h2>Implement best practices for web performance.</h2>
-            <h2>
-            <script>document.write(moment().format('MMMM Do YYYY'))</script>            
-            </h2>
+            <h2 id="date"></h2>
         </div>
 
         <div id="howto" class="content">
@@ -56,16 +51,16 @@
 
             <div class="pure-g">
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="https://scontent-lax3-1.cdninstagram.com/t51.2885-15/e15/10948794_523766494432191_181942170_n.jpg">
+                    <img class="pure-img-responsive" src="img/1.jpg">
                 </div>
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="https://scontent-lax3-1.cdninstagram.com/t51.2885-15/e15/11296875_1576154892651065_104049781_n.jpg">
+                    <img class="pure-img-responsive" src="img/2.jpg">
                 </div>
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="https://scontent-lax3-1.cdninstagram.com/t51.2885-15/e15/11373836_977992532219941_1246945570_n.jpg">
+                    <img class="pure-img-responsive" src="img/3.jpg">
                 </div>
                 <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://scontent-b-lax.cdninstagram.com/hphotos-xap1/t51.2885-15/10249317_657733337629239_1612782864_n.jpg">
+                    <img class="pure-img-responsive" src="img/4.jpg">
                 </div>               
             </div>
 
@@ -75,5 +70,17 @@
             </p>
         </div>
     </div>
+    
 </div>
-</body></html>
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link rel="stylesheet" href="css/side-menu.css">
+    <script async src="script.js" ></script>
+    <script async src="moment.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#date").text(moment().format('MMMM Do YYYY'));
+        });
+    </script>
+</body>
+</html>
