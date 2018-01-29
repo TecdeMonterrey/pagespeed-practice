@@ -6,8 +6,23 @@
 <title>PageSpeed Practice</title>
 </head>
 <body>
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
-<link rel="stylesheet" href="side-menu.css">
+<noscript id="deferred-styles">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css?v=1234" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous"/>
+  <link rel="stylesheet" type="text/css" href="side-menu.css"/>
+</noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
 <div id="layout">
     <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
